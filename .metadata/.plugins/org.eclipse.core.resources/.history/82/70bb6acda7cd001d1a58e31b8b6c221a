@@ -1,0 +1,32 @@
+package application;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import db.DB;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Connection conn= null; 
+		PreparedStatement st= null;
+		
+		try {
+			conn= DB.getConnection();// conectar ao banco de dados 
+			
+			st= conn.prepareStatement(
+						"INSERT INTO seller "
+						+"(Name, Email, BirthDate )"	
+					)
+					
+			/* st vai informar onde sera alterado no banco de dados
+			 * entre os parestes() esta comandos sql para fazer inserção de dados 
+			 * "INSERT INTO seller ": inserir no tabela seller
+			 */
+		}
+		
+
+	}
+
+}
